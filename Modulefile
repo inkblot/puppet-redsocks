@@ -1,0 +1,8 @@
+name    'inkblot/redsocks'
+version '1.0.0'
+source  'git://github.com/inkblot/puppet-redsocks'
+author  'inkblot'
+license 'Apache 2.0'
+summary 'Redsocks transparent SOCKS redirector'
+description 'A Puppet module to install and configure a redsocks transparent SOCKS redirector'
+project_page 'https://github.com/inkblot/puppet-redsocks'
