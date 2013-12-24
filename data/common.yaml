@@ -1,0 +1,13 @@
+---
+redsocks::bind_address: '127.0.0.1'
+redsocks::bind_port: '12345'
+redsocks::proxy_address: '127.0.0.1'
+redsocks::proxy_port: '1080'
+redsocks::proxy_user: ''
+redsocks::proxy_password: ''
+redsocks::bind_udp_port: '10053'
+redsocks::udp_dest_address: '8.8.8.8'
+redsocks::udp_dest_port: '53'
+redsocks::dns_address: '127.0.0.1'
+redsocks::dns_port: '5300'
+redsocks::classes: []

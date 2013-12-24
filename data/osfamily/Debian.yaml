@@ -1,0 +1,4 @@
+# ex: si ts=2 sw=2 et
+---
+redsocks::classes:
+  - 'redsocks::debian'
