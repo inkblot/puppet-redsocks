@@ -25,11 +25,11 @@ class redsocks (
         mode    => '0644',
         content => template('redsocks/redsocks.conf.erb'),
         require => Package['redsocks'],
+        notify  => Service['redsocks'],
     }
 
     service { 'redsocks':
-        ensure => running,
-        require => File['/etc/redsocks.conf'],
+        ensure  => running,
     }
 
     unless (empty($classes)) {

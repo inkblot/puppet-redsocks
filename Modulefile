@@ -1,5 +1,5 @@
 name    'inkblot/redsocks'
-version '1.1.0'
+version '1.1.1'
 source  'git://github.com/inkblot/puppet-redsocks'
 author  'inkblot'
 license 'Apache 2.0'
