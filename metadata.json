@@ -1,0 +1,25 @@
+{
+  "name": "inkblot/redsocks",
+  "version": "2.0.0",
+  "author": "inkblot",
+  "license": "Apache-2.0",
+  "summary": "Redsocks transparent SOCKS redirector",
+  "source": "git://github.com/inkblot/puppet-redsocks",
+  "project_page": "https://github.com/inkblot/puppet-redsocks",
+  "issues_url": "https://github.com/inkblot/puppet-redsocks/issues",
+  "tags": [ "redsocks", "socks", "transparent", "proxy" ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [ "7.7", "8.0" ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "12.04", "14.04" ]
+    }
+  ],
+  "dependencies": [
+    { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.1.0" }
+  ],
+  "data_provider": "hiera"
+}
