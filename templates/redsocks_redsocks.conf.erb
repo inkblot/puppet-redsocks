@@ -17,7 +17,7 @@ redsocks {
         // known types: socks4, socks5, http-connect, http-relay
         type = <%= @proxy_type %>;
 
-<% if @proxy_login != undef -%>
+<% if @proxy_login -%>
         login = "<%= @proxy_login %>";
         password = "<%= @proxy_password %>";
 <% end -%>
