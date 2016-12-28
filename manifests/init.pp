@@ -15,15 +15,15 @@ class redsocks (
     $daemon         = $redsocks::params::daemon,
     $user           = $redsocks::params::user,
     $group          = $redsocks::params::group,
-    $redirector     = $redsocks::params::redirector
-    $redsocks       = [],
-    $redudp         = [],
+    $redirector     = $redsocks::params::redirector,
+    $redsocks       = {},
+    $redudps        = {},
     $dnstc          = []
-    ) {
+    ) inherits ::redsocks::params {
 
     anchor { 'redsocks::begin': } ->
-    class { '::redsocks::install' } ->
-    class { '::redsocks::config' } ~>
-    class { '::redsocks::service' } ->
-    anchor { 'redsocks::end' }
+    class { '::redsocks::install': } ->
+    class { '::redsocks::config': } ~>
+    class { '::redsocks::service': } ->
+    anchor { 'redsocks::end': }
 }
