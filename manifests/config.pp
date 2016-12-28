@@ -15,7 +15,7 @@ class redsocks::config (
   $redsocks     = $::redsocks::redsocks,
   $redudps      = $::redsocks::redudps,
   $dnstc        = $::redsocks::dnstc
-) {
+) inherits redsocks {
 
   concat { $config_path:
     ensure  => present,
@@ -32,8 +32,8 @@ class redsocks::config (
     order   => '01',
   }
 
-  $redsocks.each |$redsock| {
-    $instance_name  = $redsock['name']
+  $redsocks.each |$index, $redsock| {
+    $instance_name  = $index
     $local_ip       = $redsock['local_ip']
     $local_port     = $redsock['local_port']
     $proxy_ip       = $redsock['proxy_ip']
@@ -49,10 +49,10 @@ class redsocks::config (
     }
   }
 
-  $redudps.each |$redudp| {
-    $instance_name      = $redudp['name'],
-    $local_ip           = $redudp['local_ip'],
-    $local_port         = $redudp['local_port'],
+  $redudps.each |$index, $redudp| {
+    $instance_name      = $index
+    $local_ip           = $redudp['local_ip']
+    $local_port         = $redudp['local_port']
     $proxy_ip           = $redudp['proxy_ip']
     $proxy_port         = $redudp['proxy_port']
     $proxy_login        = $redudp['proxy_login']
