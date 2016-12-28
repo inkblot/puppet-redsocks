@@ -8,11 +8,11 @@ class redsocks::params () {
   $config_user    = 'root'
   $config_group   = 'root'
   $config_perm    = '0640'
-  $log_debug      = 'off',
-  $log_info       = 'on',
-  $log            = 'syslog:daemon',
-  $daemon         = 'on',
-  $user           = 'redsocks',
-  $group          = 'redsocks',
+  $log_debug      = 'off'
+  $log_info       = 'on'
+  $log            = 'syslog:daemon'
+  $daemon         = 'on'
+  $user           = 'redsocks'
+  $group          = 'redsocks'
   $redirector     = 'iptables'
 }
