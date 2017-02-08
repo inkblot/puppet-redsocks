@@ -41,6 +41,7 @@ class redsocks::config (
     $proxy_type     = $redsock['proxy_type']
     $proxy_login    = $redsock['proxy_login']
     $proxy_password = $redsock['proxy_password']
+    $parse_host     = $redsock['parse_host']
 
     concat::fragment { "redsocks_redsocks_${instance_name}":
       target  => $config_path,

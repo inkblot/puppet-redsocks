@@ -21,5 +21,10 @@ redsocks {
         login = "<%= @proxy_login %>";
         password = "<%= @proxy_password %>";
 <% end -%>
+
+        // forward http_host
+<% if @parse_host -%>
+        parse_host = <%= @parse_host %>;
+<% end -%>
 }
 
